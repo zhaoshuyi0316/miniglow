@@ -1,0 +1,1 @@
+import './globals.css';export const metadata={title:'拾光 · 幸福在微小处',description:'把生活里微小的幸福，分享给此刻需要一点温暖的人。'};export default function Layout({children}:{children:React.ReactNode}){return <html lang="zh-CN"><body>{children}</body></html>}

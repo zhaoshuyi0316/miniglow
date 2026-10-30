@@ -1,0 +1,4 @@
+import { sqliteTable,text,integer,primaryKey } from 'drizzle-orm/sqlite-core';
+export const posts=sqliteTable('posts',{id:text('id').primaryKey(),owner:text('owner').notNull(),name:text('name').notNull(),title:text('title').notNull(),body:text('body').notNull(),tag:text('tag').notNull(),images:text('images').notNull(),created:integer('created').notNull()});
+export const likes=sqliteTable('likes',{post:text('post').notNull(),user:text('user').notNull()},t=>[primaryKey({columns:[t.post,t.user]})]);
+export const comments=sqliteTable('comments',{id:text('id').primaryKey(),post:text('post').notNull(),user:text('user').notNull(),name:text('name').notNull(),body:text('body').notNull(),created:integer('created').notNull()});
