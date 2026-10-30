@@ -2,3 +2,6 @@ import { sqliteTable,text,integer,primaryKey } from 'drizzle-orm/sqlite-core';
 export const posts=sqliteTable('posts',{id:text('id').primaryKey(),owner:text('owner').notNull(),name:text('name').notNull(),title:text('title').notNull(),body:text('body').notNull(),tag:text('tag').notNull(),images:text('images').notNull(),created:integer('created').notNull()});
 export const likes=sqliteTable('likes',{post:text('post').notNull(),user:text('user').notNull()},t=>[primaryKey({columns:[t.post,t.user]})]);
 export const comments=sqliteTable('comments',{id:text('id').primaryKey(),post:text('post').notNull(),user:text('user').notNull(),name:text('name').notNull(),body:text('body').notNull(),created:integer('created').notNull()});
+export const accounts=sqliteTable('accounts',{id:text('id').primaryKey(),username:text('username').notNull().unique(),name:text('name').notNull(),hash:text('hash').notNull(),salt:text('salt').notNull(),created:integer('created').notNull()});
+export const sessions=sqliteTable('sessions',{token:text('token').primaryKey(),user:text('user').notNull(),expires:integer('expires').notNull()});
+export const attempts=sqliteTable('auth_attempts',{key:text('key').primaryKey(),count:integer('count').notNull(),expires:integer('expires').notNull()});
