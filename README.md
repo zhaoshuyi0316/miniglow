@@ -1,5 +1,11 @@
 # Miniglow
 
+一个暖色、简约的幸福瞬间分享社区。支持简体中文、繁体中文与英文界面，可供学习、修改和二次开发。
+
+原创代码采用 MIT 许可证，允许使用、修改、分发和商业使用；分发时请保留版权及许可声明。第三方软件和图片适用其自身条款，见 THIRD-PARTY-NOTICES.md。
+
+**复用提示：当前版本依赖 Cloudflare Workers、D1 和 R2，不能直接当作普通 Node.js 应用部署。独立部署需创建自己的云资源并更换 .openai/hosting.json 中的项目标识。**
+
 A warm, minimal community for sharing small moments of happiness.
 
 Live site: https://miniglow.example/
@@ -47,3 +53,7 @@ The .openai/hosting.json project identifier belongs to the existing Sites deploy
 - docs/DEPLOYMENT.md — deployment and migration status
 - docs/SITES-DEVELOPMENT.md — original starter/runtime documentation
 - MOTION-NOTES.md — animation choices and reference
+
+## License
+
+Original application code is available under the MIT License. See LICENSE and THIRD-PARTY-NOTICES.md.
