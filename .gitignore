@@ -43,3 +43,23 @@ yarn-error.log*
 
 # OS metadata
 .DS_Store
+
+# Private application data, exports, archives and credentials
+/uploads/
+/data/
+/backups/
+/exports/
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.key
+*.pfx
+*.p12
+*.log
+*.zip
+*.tar
+*.tar.gz
+*.sql.gz

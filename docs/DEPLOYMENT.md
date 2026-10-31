@@ -2,7 +2,7 @@
 
 ## Current hosting
 
-Published on Sites at https://miniglow.example/ with public browsing and independent Miniglow accounts. Source bindings are declared in .openai/hosting.json: DB (D1) and BUCKET (R2).
+The maintained application is published on Sites with public browsing and independent Miniglow accounts. The production hostname and project identifier are omitted from this source distribution. Source bindings are declared in .openai/hosting.json: DB (D1) and BUCKET (R2).
 
 GitHub synchronization stores the source only; pushing here does not itself configure an automatic deployment pipeline.
 

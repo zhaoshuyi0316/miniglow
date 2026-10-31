@@ -4,11 +4,11 @@
 
 原创代码采用 MIT 许可证，允许使用、修改、分发和商业使用；分发时请保留版权及许可声明。第三方软件和图片适用其自身条款，见 THIRD-PARTY-NOTICES.md。
 
-**复用提示：当前版本依赖 Cloudflare Workers、D1 和 R2，不能直接当作普通 Node.js 应用部署。独立部署需创建自己的云资源并更换 .openai/hosting.json 中的项目标识。**
+**复用提示：当前版本依赖 Cloudflare Workers、D1 和 R2，不能直接当作普通 Node.js 应用部署。独立部署需创建自己的云资源，并在本地 .openai/hosting.json 中设置自己的项目标识。**
 
 A warm, minimal community for sharing small moments of happiness.
 
-Live site: https://miniglow.example/
+The public source intentionally omits the maintainer’s production hostname and deployment identifiers.
 
 ## Current features
 
@@ -46,7 +46,7 @@ The current app targets Cloudflare Workers. It cannot be deployed unchanged to a
 
 This repository contains source, lockfile, schema migrations and deployment configuration. It does not include production accounts, password hashes, session records, posts, comments, uploaded photos, credentials, node_modules, builds or local runtime databases. A GitHub source backup is not a production data backup.
 
-The .openai/hosting.json project identifier belongs to the existing Sites deployment; it is not an API credential. Keep it for maintenance of this site, and replace it before deploying an independent copy.
+The public .openai/hosting.json contains only logical DB and BUCKET binding names. Configure your own project identifier locally before hosted deployment. The maintainer’s live project identifier is intentionally omitted.
 
 ## Development references
 
